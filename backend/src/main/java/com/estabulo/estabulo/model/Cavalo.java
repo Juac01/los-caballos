@@ -4,14 +4,16 @@ import jakarta.persistence.*;
 //a biblioteca jakarta é utilizada para mapear classes Java
 //para tabelas em um banco de dados relacional.
 
+import java.io.Serial;
 import java.io.Serializable;
 //Isso importa a interface Serializable, que é usada para
 // indicar que a classe pode ser serializada
 //(transformada em um formato que pode ser facilmente
-// armazenado ou transmitido). Teste de atualizacao
+// armazenado ou transmitido).
 
 @Entity (name="Cavalo") // representa uma tabela no banco de dados.
 public class Cavalo implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
     @Id //informa que este atributo será a PK da tabela
     @GeneratedValue (strategy = GenerationType.IDENTITY) //Essa anotação informa ao JPA que o valor do campo id deve ser gerado e incrementado automaticamente.
@@ -45,8 +47,8 @@ public class Cavalo implements Serializable {
     @Column (name="Imagem")
     private String imagem;
 
-    public Cavalo() {
-    }
+//    public Cavalo() {
+//    }
 
     public Cavalo(String nome, int idade, String tipo, String raca, String pelagem, String genero, float preco, boolean disponivelParaCompra, String imagem) {
         this.nome = nome;

@@ -40,7 +40,7 @@ public class DBService {
         usuarioRepository.saveAll(List.of(usuario1, usuario2));
 
         // Log de confirmação
-        System.out.println("✅ Banco de dados inicializado com sucesso!");
-        System.out.println("✅ Usuários criados com senhas criptografadas!");
+        System.out.println("✅ Banco de dados inicializado com sucesso!!!!");
+        System.out.println("✅ Usuários criados com senhas criptografadas!!!");
     }
 }
