@@ -1,0 +1,141 @@
+.pagina-cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .cadastro-imagem {
+        background-image: url(../../../assets/images/cavalos/cavaloCadastro.svg);
+        flex: 1;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .cadastro-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        background-color: #1e1e1e;
+        
+
+    }
+
+    form {
+        margin: 50px;
+        background-color: #373737;
+        padding: 30px;
+        border-radius: 10px;
+
+        .formulario-cadastro-titulo {
+            width: 100%;
+            display: flex;
+            align-items: baseline;
+            color: #EDE6D5;
+
+            a {
+                cursor: pointer;
+            }
+
+            h1 {
+                justify-content: center;
+                flex: 1;
+                display: flex;
+            }
+        } 
+
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        label,
+        select,
+        option,
+        button,
+        input {
+            font-family: 'EstabuloFonte', sans-serif;
+            height: 30px;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            color: #EDE6D5;
+        }
+
+        select {
+            height: 35px;
+            color:#757575;
+        }
+
+        .formulario-cadastro-campo-duplo {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .formulario-cadastro-campo {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+            }
+
+            .formulario-cadastro-campo.checkbox {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .formulario-cadastro-campo.radio {
+                align-items: center;
+
+                .radio-group {
+                    display: flex;
+                    gap: 20px;
+
+                    div {
+                        display: flex;
+                    }
+
+                    input {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .formulario-cadastro-campo.arquivo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+
+            color:#816950;
+        }
+
+        .formulario-cadastro-botao {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            button {
+                display: flex;
+                justify-content: space-around;
+                width: 75%;
+                align-items: center;
+                padding: 15px;
+                background-color: #DFCDB1;
+                border: none;
+                cursor: pointer;
+                color: #816950;
+                transition: 0.3s;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: #5a4f3d;
+                    color: #DFCDB1;
+                }
+            }
+        }
+
+    }
+}

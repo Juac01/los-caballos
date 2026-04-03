@@ -1,0 +1,125 @@
+.pagina-detalhes {
+    background-color: #EDE6D5;
+    ;
+
+    .detalhes-cavalo {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        padding: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .imagem-cavalo {
+        align-items: center;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        border: 3px solid #816950;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    .info-cavalo {
+        max-width: 500px;
+        flex: 1;
+        border: 3px solid #816950;
+        ;
+        padding: 15px;
+        background-color: #816950;
+        ;
+        font-family: 'EstabuloFonte', sans-serif;
+
+
+        .info-principal {
+            text-align: center;
+            margin: 20px 0;
+
+            div {
+                width: 100%;
+                display: flex;
+                align-items: baseline;
+
+                a {
+                    cursor: pointer;
+                    color: #EDE6D5;
+
+                }
+
+                h1 {
+                    justify-content: center;
+                    flex: 1;
+                    display: flex;
+                    color: #30291e
+                }
+            }
+        }
+
+
+        .info-principal h3 {
+            color: #30291e;
+
+            span {
+                font-weight: normal;
+                color: #EDE6D5;
+            }
+        }
+
+        .descricao {
+            margin: 20px 0;
+            color: #EDE6D5;
+            text-align: center;
+        }
+
+        .info-detalhada {
+            background-color: #EDE6D5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .info-detalhada ul {
+            list-style: none;
+            padding: 0;
+            color: #343A40;
+
+        }
+
+        .info-detalhada li {
+            margin-bottom: 10px;
+        }
+
+        .info-detalhada strong {
+            color: #5a4f3d;
+        }
+
+        .acao {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+
+        .acao button {
+            padding: 10px 20px;
+            color: #816950;
+            background-color: #DFCDB1;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: #5a4f3d;
+                color: #DFCDB1;
+            }
+        }
+    }
+}

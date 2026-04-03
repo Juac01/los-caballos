@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'EstabuloFonte';
+    src: url('./assets/fonts/chinese-rocks-rg.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body { height: 100%;  }
+body { margin: 0;  }
+p, h1, h2, h3, button {
+    font-family: 'EstabuloFonte', sans-serif;
+}
+
+
+

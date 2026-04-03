@@ -1,0 +1,12 @@
+<header class="cabecalho">
+  <div class="logo">Los Caballos</div>
+  <nav class="nav">
+    <a routerLink="/">HOME</a> |
+    <a routerLink="/cavalos">CAVALOS</a> |
+    <a routerLink="/sobre">SOBRE</a> |
+    <a routerLink="/dicas">DICAS</a>
+  </nav>
+  <button (click)="toggleLogin()">
+    {{ isAdmin ? 'SAIR' : 'ENTRAR' }}
+  </button>
+</header>

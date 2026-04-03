@@ -1,0 +1,53 @@
+<main class="pagina-cadastro">
+  <div class="cadastro-imagem"></div>
+
+  <div class="cadastro-formulario">
+    <form class="formulario-cadastro-container" (ngSubmit)="cadastrar()">
+      <div class="formulario-cadastro-titulo">
+        <h1>Cadastro</h1>
+      </div>
+
+      <div class="formulario-cadastro-campo">
+        <input 
+          type="email" 
+          placeholder="E-mail" 
+          [(ngModel)]="email" 
+          name="email" 
+          required
+        />
+      </div>
+
+      <div class="formulario-cadastro-campo">
+        <input 
+          type="text" 
+          placeholder="CPF" 
+          [(ngModel)]="cpf" 
+          name="cpf" 
+          required
+        />
+      </div>
+
+      <div class="formulario-cadastro-campo">
+        <input 
+          type="password" 
+          placeholder="Senha" 
+          [(ngModel)]="senha" 
+          name="senha" 
+          required
+        />
+      </div>
+
+      <div class="formulario-cadastro-botao">
+        <button type="submit">Cadastrar</button>
+      </div>
+
+      <div *ngIf="mensagemErro" class="mensagem-erro">
+        {{ mensagemErro }}
+      </div>
+
+      <div class="formulario-cadastro-link">
+        <p>Já tem uma conta? <a (click)="login()">Clique aqui para entrar</a></p>
+      </div>
+    </form>
+  </div>
+</main>

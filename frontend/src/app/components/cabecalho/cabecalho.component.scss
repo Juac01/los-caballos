@@ -1,0 +1,93 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #EDE6D5;
+    color: #343A40;
+    font-family: 'EstabuloFonte', sans-serif;
+  
+    .logo {
+      width: 131px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      
+      
+      a {
+        text-decoration: none;
+        color:#343A40;
+        cursor: pointer;
+        transition: color 0.3s;
+
+            &:hover {
+                color: #816950;
+            }
+      }
+  
+      
+    }
+
+    button {
+      width: 131px;
+      background-color: #343A40;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #816950;
+      }
+    }
+
+      /* Media Query para telas pequenas */
+    @media (max-width: 768px) {
+      padding: 15px; /* Reduz o padding */
+
+      .logo {
+          font-size: 18px; /* Diminui o tamanho da fonte */
+          width: auto; /* Deixa a largura da logo mais flexível */
+      }
+
+      .nav {
+          gap: 20px; /* Aumenta o espaçamento entre os links */
+          a {
+              font-size: 14px; /* Diminui o tamanho da fonte dos links */
+          }
+      }
+
+      button {
+          padding: 5px 15px; /* Ajusta o padding do botão */
+          font-size: 14px; /* Diminui o tamanho da fonte do botão */
+      }
+  }
+
+  /* Media Query para telas muito pequenas */
+  @media (max-width: 480px) {
+      .logo {
+          font-size: 16px; /* Diminui mais ainda o tamanho da fonte */
+      }
+
+      .nav {
+          gap: 15px; /* Ajusta o espaçamento entre os links */
+          a {
+              font-size: 12px; /* Diminui o tamanho da fonte dos links */
+          }
+      }
+
+      button {
+        width: 60px;
+          padding: 4px 12px; /* Ajusta o padding do botão */
+          font-size: 12px; /* Diminui ainda mais o tamanho da fonte do botão */
+      }
+  }
+}
+  

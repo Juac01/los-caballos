@@ -1,0 +1,131 @@
+.pagina-login {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+
+    .login-imagem {
+        background-image: url(../../../assets/images/cavalos/cavaloLogin.svg);
+        flex: 1;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .login-formulario {
+        display: flex;
+        align-items: center;
+        background-color: #1E1E1E;
+        flex: 1;
+        justify-content: center;
+
+        form {
+            justify-content: center;
+            height: 70%;
+            width: 50%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+            background-color: #373737;
+            gap: 30px;
+
+            .formulario-login-titulo {
+                width: 100%;
+                display: flex;
+                align-items: baseline;
+
+                a {
+                    cursor: pointer;
+                }
+
+                h1 {
+                    justify-content: center;
+                    flex: 1;
+                    display: flex;
+                }
+            }
+
+            h1,
+            input,
+            button,
+            a {
+                font-family: 'EstabuloFonte', sans-serif;
+                color: #EDE6D5;
+                height: 30px;
+            }
+
+            .formulario-login-campo {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                input {
+                    width: 75%;
+
+                    border: none;
+                    background-color: #373737;
+                    border-bottom: 2px solid #816950;
+                    ;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .formulario-login-botao {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                button {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 75%;
+                    align-items: center;
+                    padding: 15px;
+                    background-color: #DFCDB1;
+                    border: none;
+                    cursor: pointer;
+                    color: #816950;
+                    transition: 0.3s;
+                    border-radius: 5px;
+
+                    &:hover {
+                        background-color: #5a4f3d;
+                        color: #DFCDB1;
+                    }
+                }
+            }
+
+            .formulario-login-link {
+                margin-top: 10px;
+
+                p {
+                    color: #816950
+                }
+        
+                a {
+                  font-family: 'EstabuloFonte', sans-serif;
+                  color: #EDE6D5;
+                  transition: 0.3s;
+                  font-size: 14px;
+                  cursor: pointer;
+                  text-decoration: underline;
+        
+                  &:hover {
+                    color: #5a4f3d;
+                    
+                  }
+                }
+              }
+        }
+    }
+    .error-message {
+        color: red;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    
+}

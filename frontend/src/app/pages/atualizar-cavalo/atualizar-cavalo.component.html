@@ -1,0 +1,96 @@
+<main class="pagina-cadastro">
+    <app-cabecalho></app-cabecalho>
+
+    <div class="cadastro-container">
+        <form (ngSubmit)="onSubmit()">
+            <div class="formulario-cadastro-titulo">
+                <a (click)="voltar()">
+                    <mat-icon>arrow_back</mat-icon>
+                </a>
+                <h1>{{ cavalo.id ? 'Editar Cavalo' : 'Inserir Cavalo' }}</h1>
+            </div>
+            <div class="formulario-cadastro-campo-duplo">
+                <div class="formulario-cadastro-campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite o nome do cavalo" required
+                        [(ngModel)]="cavalo.nome" name="cavalo.nome" />
+                </div>
+
+                <div class="formulario-cadastro-campo">
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" placeholder="Digite a idade" required [(ngModel)]="cavalo.idade"
+                        name="cavalo.idade" />
+                </div>
+            </div>
+
+            <div class="formulario-cadastro-campo-duplo">
+                <div class="formulario-cadastro-campo">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" required [(ngModel)]="cavalo.tipo" name="cavalo.tipo">
+                        <option value="Corrida">Corrida</option>
+                        <option value="Tração">Tração</option>
+                        <option value="Serviço">Serviço</option>
+                    </select>
+                </div>
+
+                <div class="formulario-cadastro-campo">
+                    <label for="raca">Raça:</label>
+                    <input type="text" id="raca" placeholder="Digite a raça" required [(ngModel)]="cavalo.raca"
+                        name="cavalo.raca" />
+                </div>
+            </div>
+
+            <div class="formulario-cadastro-campo-duplo">
+                <div class="formulario-cadastro-campo">
+                    <label for="pelagem">Pelagem:</label>
+                    <input type="text" id="pelagem" placeholder="Digite a pelagem" [(ngModel)]="cavalo.pelagem"
+                        name="cavalo.pelagem" />
+                </div>
+
+                <div class="formulario-cadastro-campo">
+                    <label for="preco">Preço:</label>
+                    <input type="number" id="preco" step="0.01" placeholder="Digite o preço" [(ngModel)]="cavalo.preco"
+                        name="cavalo.preco" />
+                </div>
+            </div>
+
+            <div class="formulario-cadastro-campo-duplo">
+                <div class="formulario-cadastro-campo radio">
+                    <label>Gênero:</label>
+                    <div class="radio-group">
+                        <div>
+                            <input type="radio" id="macho" value="Macho" required [(ngModel)]="cavalo.genero"
+                                name="cavalo.genero" />
+                            <label for="macho">Macho</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="femea" value="Fêmea" [(ngModel)]="cavalo.genero"
+                                name="cavalo.genero" />
+                            <label for="femea">Fêmea</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formulario-cadastro-campo checkbox">
+                    <label>Disponível:</label>
+                    <input type="checkbox" id="disponivelParaCompra" [(ngModel)]="cavalo.disponivelParaCompra"
+                        name="cavalo.disponivelParaCompra" />
+                </div>
+            </div>
+
+            <div class="formulario-cadastro-campo arquivo">
+                <label for="imagem">Imagem do Cavalo:</label>
+                <input type="file" id="imagem" accept="image/*" (change)="onImageChange($event)" />
+             
+            </div>
+
+            <div class="formulario-cadastro-botao">
+                <button type="submit">{{ cavalo.id ? 'Salvar alterações' : 'Cadastrar Cavalo' }}</button>
+            </div>
+
+        </form>
+    </div>
+    <app-rodape></app-rodape>
+
+</main>

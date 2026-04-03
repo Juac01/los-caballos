@@ -1,0 +1,44 @@
+
+<main class="pagina-login">
+    <div class="login-formulario">
+        <form class="formulario-login-container" (ngSubmit)="onSubmit()">
+            <div class="formulario-login-titulo">
+                <!-- <a (click)="voltar()">
+                    <mat-icon>arrow_back</mat-icon>
+                </a> -->
+                <h1>Login</h1>
+            </div>
+
+            <div class="formulario-login-campo">
+                <input 
+                    type="email" 
+                    placeholder="Usuário" 
+                    [(ngModel)]="usuario.email"
+                    name="usuario" />
+            </div>
+
+            <div class="formulario-login-campo">
+                <input 
+                    type="password" 
+                    placeholder="Senha" 
+                    [(ngModel)]="usuario.senha"
+                    name="senha" />
+            </div>
+
+            <div class="error-message" *ngIf="errorMessage">
+                {{ errorMessage }}
+            </div>
+
+            <div class="formulario-login-botao">
+                <button type="submit">Entrar</button>
+            </div>
+
+            <div class="formulario-login-link">
+                <p>Não possui uma conta? <a (click)="cadastro()">Crie uma aqui</a></p>
+              </div>
+        </form>
+    </div>
+
+    <div class="login-imagem">
+    </div>
+</main>

@@ -1,0 +1,49 @@
+<main class="pagina-detalhes">
+  <app-cabecalho></app-cabecalho>
+
+  <div class="detalhes-cavalo">
+    <div class="imagem-cavalo">
+      <img [src]="cavalo?.imagem" alt="Imagem do Cavalo" />
+    </div>
+
+    <div class="info-cavalo">
+      <div class="info-principal">
+        <div>
+          <a (click)="voltar()">
+            <mat-icon>arrow_back</mat-icon>
+          </a>
+          <h1>{{cavalo?.nome}}</h1>
+          <a (click)="editarCavalo()">
+            <mat-icon>edit</mat-icon>
+          </a>
+
+
+        </div>
+        <h3>Raça: <span>{{cavalo?.raca}}</span></h3>
+      </div>
+      <div class="descricao">
+        <p>
+          Este cavalo é conhecido por sua resistência e beleza. Ideal para quem procura um companheiro de trabalho ou
+          corrida.
+          Sua pelagem única e temperamento dócil o tornam perfeito para todas as idades.
+        </p>
+      </div>
+      <div class="info-detalhada">
+        <ul>
+          <li><strong>Idade:</strong> {{cavalo?.idade}}</li>
+          <li><strong>Pelagem:</strong> {{cavalo?.pelagem}}</li>
+          <li><strong>Gênero:</strong> {{cavalo?.genero}}</li>
+          <li><strong>Tipo:</strong> {{cavalo?.tipo}}</li>
+          <li><strong>Preço:</strong> {{cavalo?.preco}}</li>
+          <li><strong>Disponível para compra:</strong> {{cavalo?.disponivelParaCompra}}</li>
+        </ul>
+      </div>
+      <div class="acao">
+        <button (click)="apagarCavalo(cavalo?.id)">Remover Cavalo</button>
+      </div>
+    </div>
+  </div>
+
+  <app-rodape></app-rodape>
+
+</main>

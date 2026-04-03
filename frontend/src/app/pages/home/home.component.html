@@ -1,0 +1,128 @@
+<main>
+    <app-cabecalho></app-cabecalho>
+
+    <section class="primeira-secao">
+        <div class="container-imagem">
+            <img src="../../../assets/images/cavalos/cavaloBranco.svg" />
+        </div>
+
+        <div class="primeira-secao-conteudo-container">
+
+            <div class="primeira-secao-conteudo">
+                <div class="informacoes">
+                    <h1>O MELHOR AMIGO DO HOMEM</h1>
+                    <p>Bem-vindo ao Los Cabalos! Aqui, a paixão por cavalos se
+                        une à excelência na criação e venda. Oferecemos uma
+                        seleção de equinos de alta qualidade, criados com
+                        dedicação e cuidado. Seja para lazer, competições ou
+                        trabalho, temos o cavalo perfeito para você. Venha nos
+                        visitar e encontre o seu novo companheiro!</p>
+                </div>
+
+                <hr />
+
+                <div class="botoes">
+                    <!-- <button class="botao-primario">Fazer Login</button> -->
+                    <button class="botao-secundario"
+                        (click)="adicionarCavalo()">Adicionar Cavalo</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-imagem">
+            <img src="../../../assets/images/cavalos/cavaloVermelho.svg" />
+        </div>
+    </section>
+
+    <section class="segunda-secao">
+        <div class="segunda-secao-titulo">
+            <h1>ESTÁBULO</h1>
+        </div>
+
+        <div class="segunda-secao-botao">
+            <button (click)="abrirMenuFiltros()">Filtrar
+                <mat-icon>filter_list</mat-icon>
+            </button>
+            <div *ngIf="menuFiltrosAberto" class="menu-filtros">
+                <label>
+                    <input type="checkbox" [(ngModel)]="filtros.disponivel"
+                        (change)="atualizarFiltros('disponivel')" /> Disponíveis
+                </label>
+                <label>
+                    <input type="checkbox" [(ngModel)]="filtros.indisponivel"
+                        (change)="atualizarFiltros('indisponivel')" />
+                    Indisponíveis
+                </label>
+                <button (click)="aplicarFiltros()">Aplicar Filtros</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="terceira-secao">
+        <div class="terceira-secao-container">
+            <app-card-cavalo *ngFor="let cavalo of listaFiltrada"
+                [cavalo]="cavalo"></app-card-cavalo>
+        </div>
+    </section>
+
+    <section class="quarta-secao">
+        <div class="contato-imagem">
+        </div>
+
+        <div class="contato-formulario">
+
+            <form>
+                <div class="formulario-titulo">
+                    <h1>Contato</h1>
+                </div>
+
+                <div class="formulario-container">
+                    <div class="formulario-campo">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" name="nome" />
+
+                    </div>
+
+                    <div class="formulario-campo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" />
+
+                    </div>
+
+                    <div class="formulario-campo-duplo">
+                        <div class="formulario-campo">
+                            <label for="motivoContato">Motivo de
+                                Contato:</label>
+                            <select id="motivoContato" value={motivoContato}
+                                name="motivoContato">
+                                <option value="Compra">Compra</option>
+                                <option value="Venda">Venda</option>
+                                <option value="Aluguel">Aluguel</option>
+                                <option value="Cuidados">Cuidados</option>
+                            </select>
+                        </div>
+
+                        <div class="formulario-campo">
+                            <label for="email">Telefone:</label>
+                            <input type="text" name="email" />
+                        </div>
+
+                    </div>
+
+                    <div class="formulario-campo">
+                        <label for="email">Mensagem:</label>
+                        <textarea type="text" name="email"></textarea>
+                    </div>
+                </div>
+
+                <div class="formulario-botao">
+                    <button>Enviar</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <app-rodape></app-rodape>
+</main>
