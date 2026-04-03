@@ -8,7 +8,7 @@ import java.io.Serializable;
 //Isso importa a interface Serializable, que é usada para
 // indicar que a classe pode ser serializada
 //(transformada em um formato que pode ser facilmente
-// armazenado ou transmitido).
+// armazenado ou transmitido). Teste de atualizacao
 
 @Entity (name="Cavalo") // representa uma tabela no banco de dados.
 public class Cavalo implements Serializable {
