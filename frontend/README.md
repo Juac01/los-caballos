@@ -1,27 +1,32 @@
-# Estabulo
+# Frontend - Los Caballos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+Aplicação Angular responsável pela interface do usuário e comunicação com a API backend.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias
 
-## Code scaffolding
+- Angular
+- TypeScript
+- HTML / CSS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## Funcionalidades
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Tela de login
+- Formulários para operações CRUD
+- Validação de dados no cliente
+- Integração com a API
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Como executar
 
-## Running end-to-end tests
+```bash
+cd frontend
+npm install
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
